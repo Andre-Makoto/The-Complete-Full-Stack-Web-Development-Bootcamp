@@ -19,20 +19,20 @@ app.get("/", (req, res) => {
 app.post("/recipe", (req, res) => {
   const data = JSON.parse(recipeJSON);
   const choice = req.body.choice;
-  console.log(choice);
+  // console.log(choice);
     if (choice === "chicken"){
     const firstObject = data[0];
-    console.log(firstObject.name);  
+    // console.log(firstObject.name);  
     res.render("index.ejs", {firstObject});
   };
     if (choice === "beef"){
       const secondObject = data[1];
-      console.log(secondObject.name);
+      // console.log(secondObject.name);
       res.render("index.ejs", {secondObject});
     };
     if (choice === "fish"){
       const thirdObject = data[2];
-      console.log(thirdObject.name);
+      // console.log(thirdObject.name);
       res.render("index.ejs", {thirdObject});
     }
   //Step 3: Write your code here to make this behave like the solution website.
