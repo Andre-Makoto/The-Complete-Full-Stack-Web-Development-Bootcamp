@@ -42,7 +42,9 @@
       <ul id="ingredientsList">
         <li><%= thirdObject.ingredients.protein.name %>, <%= thirdObject.ingredients.protein.preparation %></li>
         <li><%= thirdObject.ingredients.salsa.name %>, <%= thirdObject.ingredients.salsa.spiciness %></li>
-        <li>Every other topping</li>
+        <% for( let i = 0; i < thirdObject.ingredients.toppings.length; i++ ) { %>
+        <li><%= thirdObject.ingredients.toppings[i].name %></li>
+        <% } %>
       </ul>
       <% } else { %>
         <h2>Pick your favourite taco ingredient 👆</h2>
