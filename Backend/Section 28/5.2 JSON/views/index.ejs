@@ -32,6 +32,9 @@
       <ul id="ingredientsList">
         <li><%= secondObject.ingredients.protein.name %>, <%= secondObject.ingredients.protein.preparation %></li>
         <li><%= secondObject.ingredients.salsa.name %>, <%= secondObject.ingredients.salsa.spiciness %></li>
+        <% for( let i = 0; i < secondObject.ingredients.toppings.length; i++ ) { %>
+        <li> <%= secondObject.ingredients.toppings[i].name %></li>
+        <% } %>
       </ul>
       <% } else if (locals.thirdObject) { %>
         <h2><%= thirdObject.name %></h2>
