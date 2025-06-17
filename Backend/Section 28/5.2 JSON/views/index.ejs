@@ -30,9 +30,7 @@
       <h2><%= secondObject.name %></h2>
       <h3>Ingredients:</h3>
       <ul id="ingredientsList">
-        <li>Protein name, protein preparation</li>
-        <li>Salsa name</li>
-        <li>Every other topping</li>
+        <li><%= secondObject.ingredients.protein.name %>, <%= secondObject.ingredients.protein.preparation %></li>
       </ul>
       <% } else if (locals.thirdObject) { %>
         <h2><%= thirdObject.name %></h2>
