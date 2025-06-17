@@ -33,7 +33,7 @@
         <li><%= secondObject.ingredients.protein.name %>, <%= secondObject.ingredients.protein.preparation %></li>
         <li><%= secondObject.ingredients.salsa.name %>, <%= secondObject.ingredients.salsa.spiciness %></li>
         <% for( let i = 0; i < secondObject.ingredients.toppings.length; i++ ) { %>
-        <li> <%= secondObject.ingredients.toppings[i].name %></li>
+        <li> <%= secondObject.ingredients.toppings[i].quantity %> <%= secondObject.ingredients.toppings[i].name %></li>
         <% } %>
       </ul>
       <% } else if (locals.thirdObject) { %>
