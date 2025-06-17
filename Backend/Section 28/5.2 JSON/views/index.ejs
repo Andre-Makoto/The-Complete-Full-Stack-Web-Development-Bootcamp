@@ -23,8 +23,9 @@
       <ul id="ingredientsList">
         <li><%= firstObject.ingredients.protein.name %>, <%= firstObject.ingredients.protein.preparation %></li>
         <li><%= firstObject.ingredients.salsa.name %>, <%= firstObject.ingredients.salsa.spiciness %></li>
-        <li>Every other topping</li>
-      </ul>
+        <% for( let i = 0; i < firstObject.ingredients.toppings.length; i++ ) { %>
+          <li> <%= firstObject.ingredients.toppings[i].name %></li>
+        <% } %>
      <% } else if (locals.secondObject) { %>
       <h2><%= secondObject.name %></h2>
       <h3>Ingredients:</h3>
