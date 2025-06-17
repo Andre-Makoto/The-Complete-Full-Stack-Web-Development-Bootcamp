@@ -24,7 +24,7 @@
         <li><%= firstObject.ingredients.protein.name %>, <%= firstObject.ingredients.protein.preparation %></li>
         <li><%= firstObject.ingredients.salsa.name %>, <%= firstObject.ingredients.salsa.spiciness %></li>
         <% for( let i = 0; i < firstObject.ingredients.toppings.length; i++ ) { %>
-          <li> <%= firstObject.ingredients.toppings[i].name %></li>
+          <li> <%= firstObject.ingredients.toppings[i].quantity %> <%= firstObject.ingredients.toppings[i].name %></li>
         <% } %>
      <% } else if (locals.secondObject) { %>
       <h2><%= secondObject.name %></h2>
