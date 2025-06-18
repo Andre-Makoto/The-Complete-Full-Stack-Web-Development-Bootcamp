@@ -37,8 +37,8 @@
       <article class="card-item">
         <h2 class="card-activity">
           <!-- Show Activity -->
-          <% if (locals.filter) { %>
-            <%= filter.activity %>
+          <% if (locals.data) { %>
+            <%= data.activity %>
           <% } else { %>
           <%= data.activity %>
           <% } %>
@@ -46,18 +46,18 @@
         <div class="card-info">
           <span class="card-type">
             <!-- Show Activity type -->
-            <% if (locals.filter) { %>
-              <%= filter.type %>
+            <% if (locals.data) { %>
+              <%= data.type %>
             <% } else { %>
             <%= data.type %>
             <% } %>
           </span>
           <span class="card-participants">
             <!-- participants: Show participant number -->
-            <% if (locals.filter) { %>
-              <%= filter.participant %>
+            <% if (locals.data) { %>
+              <%= data.participants %>
             <% } else { %>
-            <%= data.participant %>
+            <%= data.participants %>
             <% } %>
             <span class="card-number"></span>
           </span>
