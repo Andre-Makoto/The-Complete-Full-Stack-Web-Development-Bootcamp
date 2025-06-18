@@ -39,30 +39,21 @@
           <!-- Show Activity -->
           <% if (locals.data) { %>
             <%= data.activity %>
-          <% } else { %>
-          <%= data.activity %>
-          <% } %>
         </h2>
         <div class="card-info">
           <span class="card-type">
             <!-- Show Activity type -->
-            <% if (locals.data) { %>
               <%= data.type %>
-            <% } else { %>
-            <%= data.type %>
-            <% } %>
           </span>
           <span class="card-participants">
             <!-- participants: Show participant number -->
-            <% if (locals.data) { %>
-              <%= data.participants %>
-            <% } else { %>
-            <%= data.participants %>
-            <% } %>
+                participants: <%= data.participants %>
             <span class="card-number"></span>
           </span>
         </div>
       </article>
+
+      <% } %>
 
 
       <div id="tag-error" class="tag-error">
