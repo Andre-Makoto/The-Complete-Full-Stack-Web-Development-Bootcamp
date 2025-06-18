@@ -37,7 +37,11 @@
       <article class="card-item">
         <h2 class="card-activity">
           <!-- Show Activity -->
-           <%= data.activity %>
+          <% if (locals.filter) { %>
+            <%= filter.activity %>
+          <% } else { %>
+          <%= data.activity %>
+          <% } %>
         </h2>
         <div class="card-info">
           <span class="card-type">

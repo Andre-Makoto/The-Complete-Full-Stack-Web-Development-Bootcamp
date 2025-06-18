@@ -29,10 +29,13 @@ app.post("/", async (req, res) => {
   console.log(req.body);
   try {
     const typeSelected = req.body.type;
+    console.log(typeSelected);
     const participantsSelected = req.body.participants;
+    console.log(participantsSelected);
     const filter = await axios.get(`https://bored-api.appbrewery.com/filter?type= ${typeSelected} &participants= ${participantsSelected}`)
-    const typeAndParticipants = filter.data;
-    res.render("index.ejs", { filter: typeAndParticipants })  
+    const random = Math.floor(Math.random() * 30);
+    const typeAndParticipants = filter.data[random];
+    res.render("index.ejs", { filter: typeAndParticipants });
   } catch (error) {
     
   }
