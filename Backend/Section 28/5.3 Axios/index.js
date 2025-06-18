@@ -28,14 +28,11 @@ app.get("/", async (req, res) => {
 app.post("/", async (req, res) => {
   console.log(req.body);
   try {
-    const typeSelected = req.body.type;
-    console.log(typeSelected);
-    const participantsSelected = req.body.participants;
-    console.log(participantsSelected);
-    const filter = await axios.get(`https://bored-api.appbrewery.com/filter?type= ${typeSelected} &participants= ${participantsSelected}`)
-    const random = Math.floor(Math.random() * 30);
-    const typeAndParticipants = filter.data[random];
-    res.render("index.ejs", { filter: typeAndParticipants });
+    const type = req.body.type;
+    const participants = req.body.participants;
+    const filter = await axios.get(`https://bored-api.appbrewery.com/filter?type=${type}&participants=${participants}`)
+    const typeAndParticipants = filter.data;
+    res.render("index.ejs", { filter: typeAndParticipants[Math.floor(Math.random() * typeAndParticipants.length)] });
   } catch (error) {
     
   }

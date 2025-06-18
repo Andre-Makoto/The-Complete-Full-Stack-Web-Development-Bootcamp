@@ -46,11 +46,19 @@
         <div class="card-info">
           <span class="card-type">
             <!-- Show Activity type -->
-             <%= data.type %>
+            <% if (locals.filter) { %>
+              <%= filter.type %>
+            <% } else { %>
+            <%= data.type %>
+            <% } %>
           </span>
           <span class="card-participants">
             <!-- participants: Show participant number -->
-             <%= data.participants %>
+            <% if (locals.filter) { %>
+              <%= filter.participant %>
+            <% } else { %>
+            <%= data.participant %>
+            <% } %>
             <span class="card-number"></span>
           </span>
         </div>
