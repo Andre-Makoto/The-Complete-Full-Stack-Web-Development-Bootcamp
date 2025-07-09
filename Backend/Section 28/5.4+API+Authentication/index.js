@@ -16,6 +16,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/noAuth", (req, res) => {
+  try {
+    const response = axios.get("https://bored-api.appbrewery.com/random");
+    const result = response.data;
+    res.render("index.ejs", {data: result});
+  } catch (error) {
+    console.error("Failed to make request:", error.message);
+    res.render("index.ejs", {
+      error: error.message,
+    });
+  }
   //TODO 2: Use axios to hit up the /random endpoint
   //The data you get back should be sent to the ejs file as "content"
   //Hint: make sure you use JSON.stringify to turn the JS object from axios into a string.
