@@ -37,7 +37,10 @@ app.get("/basicAuth", async (req, res) => {
     const response = await axios.get(API_URL + "all");
     const result = JSON.stringify(response.data);
   } catch (error) {
-    
+    console.error("Failed to make request:", error.message);
+    res.render("index.ejs", {
+      error: error.message,
+    });
   }
   //TODO 3: Write your code here to hit up the /all endpoint
   //Specify that you only want the secrets from page 2
