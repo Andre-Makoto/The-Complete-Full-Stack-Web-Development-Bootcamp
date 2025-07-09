@@ -15,9 +15,9 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { content: "API Response." });
 });
 
-app.get("/noAuth", (req, res) => {
+app.get("/noAuth", async (req, res) => {
   try {
-    const response = axios.get("https://bored-api.appbrewery.com/random");
+    const response = await axios.get("https://bored-api.appbrewery.com/random");
     const result = JSON.stringify(response.data);
     console.log(result);
     res.render("index.ejs", {content: result});
