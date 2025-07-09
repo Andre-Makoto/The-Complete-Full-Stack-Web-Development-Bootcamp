@@ -36,6 +36,7 @@ app.get("/basicAuth", async (req, res) => {
   try { 
     const response = await axios.get(API_URL + "all");
     const result = JSON.stringify(response.data);
+    res.render("index.ejs", {content: result})
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
