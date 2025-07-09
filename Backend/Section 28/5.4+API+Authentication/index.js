@@ -19,7 +19,8 @@ app.get("/noAuth", (req, res) => {
   try {
     const response = axios.get("https://bored-api.appbrewery.com/random");
     const result = response.data;
-    res.render("index.ejs", {data: result});
+    console.log(result);
+    res.render("index.ejs", {content: result});
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
