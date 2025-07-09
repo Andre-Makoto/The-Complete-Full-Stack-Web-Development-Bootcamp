@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 app.get("/noAuth", async (req, res) => {
   try {
-    const response = await axios.get("https://bored-api.appbrewery.com/random");
+    const response = await axios.get(API_URL + "random");
     const result = JSON.stringify(response.data);
     console.log(result);
     res.render("index.ejs", {content: result});
