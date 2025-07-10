@@ -64,7 +64,7 @@ app.get("/basicAuth", async (req, res) => {
 
 app.get("/apiKey", async (req, res) => {
   try {
-    const response = await axios.get(API_URL + `filter?score=5$apiKey=${yourAPIKey}`);
+    const response = await axios.get(API_URL + `filter?score=5&apiKey=${yourAPIKey}`);
     const result = JSON.stringify(response.data); 
     res.render("index.ejs", {content: result});
   } catch (error) {
