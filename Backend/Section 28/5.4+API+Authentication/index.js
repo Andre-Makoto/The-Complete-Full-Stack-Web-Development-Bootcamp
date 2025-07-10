@@ -93,7 +93,7 @@ app.get("/bearerToken", async (req, res) => {
       error: error.message,
     });
   }
-  //TODO 5: Write your code here to hit up the /secrets/{id} endpoint
+  //TODO 5: Write your code here to hit up the /secrets/{id} endpoint. DONE ✅
   //and get the secret with id of 42
   //HINT: This is how you can use axios to do bearer token auth:
   // https://stackoverflow.com/a/52645402
