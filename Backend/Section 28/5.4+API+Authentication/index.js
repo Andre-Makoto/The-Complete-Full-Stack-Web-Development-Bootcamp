@@ -73,7 +73,7 @@ app.get("/apiKey", async (req, res) => {
       error: error.message,
     });
   }
-  //TODO 4: Write your code here to hit up the /filter endpoint
+  //TODO 4: Write your code here to hit up the /filter endpoint. DONE ✅
   //Filter for all secrets with an embarassment score of 5 or greater
   //HINT: You need to provide a query parameter of apiKey in the request.
 });
