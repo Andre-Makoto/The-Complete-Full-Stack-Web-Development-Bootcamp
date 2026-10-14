@@ -1,0 +1,17 @@
+import React from "react";
+
+function InputArea(props) {
+  return (
+    <div className="form">
+      <input onChange={ () => {
+        props.handleChange()
+      }} 
+      type="text" value={inputText} />
+      <button onClick={addItem}>
+        <span>Add</span>
+      </button>
+    </div>
+  );
+}
+
+export default InputArea;
